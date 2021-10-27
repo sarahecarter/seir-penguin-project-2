@@ -44,6 +44,18 @@ router.post("/", (req, res) => {
     })
 })
 
+// Edit route
+router.get("/:id/edit", (req, res) => {
+    const id = req.params.id
+
+    // find pattern
+    Pattern.findById(id)
+    .then((pattern) => {
+        // render edit form
+        res.render("patterns/edit.liquid", {pattern})
+    })
+})
+
 // Show route
 router.get("/:id", (req, res) => {
     const id = req.params.id

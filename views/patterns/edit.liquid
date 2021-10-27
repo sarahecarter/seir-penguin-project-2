@@ -1,0 +1,55 @@
+{% layout "layout.liquid" %}
+{% block content %}
+<h2>Edit Pattern Info</h2>
+<form action="/patterns" method="post">
+    <div class="flex-pair">
+        <label for="name">Pattern Name:</label>
+        <input type="text" name="name" id="name" value="{{pattern.name}}">
+    </div>
+    <div class="flex-pair">
+        <label for="designer">Designer:</label>
+        <input type="text" name="designer" id="designer" value="{{pattern.designer}}">
+    </div>
+    <div class="flex-pair">
+        <label for="img">Image:</label>
+        <input type="text" name="img" id="img" value="{{pattern.img}}">
+    </div>
+    <div class="flex-pair">
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="{{pattern.description}}">
+    </div>
+    <div class="flex-pair">
+        <label for="level">Skill Level:</label>
+        <input type="text" name="level" id="level" value="{{pattern.level}}">
+    </div>
+    <div class="flex-pair">
+        <label for="yarnWeight">Yarn Weight:</label>
+        <input type="text" name="yarnWeight" id="yarnWeight" value="{{pattern.yarnWeight}}">
+    </div>
+    <div class="flex-pair">
+        <label for="needleSize">Needle Size (US):</label>
+        <input type="text" name="needleSize" id="needleSize" value="{{pattern.needleSize}}">
+    </div>
+    <div class="flex-pair">
+        <label for="purchased">Purchased?:</label>
+        <input type="checkbox" name="purchased" id="purchased"
+        {% if pattern.purchased == true%}
+        checked
+        {% endif %}
+        >
+    </div>
+    <div class="flex-pair">
+        <label for="link">Pattern Link:</label>
+        <input type="text" name="link" id="link" value="{{pattern.link}}">
+    </div>
+    <div class="flex-pair">
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price" value="{{pattern.price}}">
+    </div>
+    <div class="flex-pair">
+        <label for="tags">Tags:</label>
+        <input type="text" name="tags" id="tags" value="{{pattern.tags}}">
+    </div>
+    <input type="submit" value="Update Pattern">
+</form>
+{% endblock %}
