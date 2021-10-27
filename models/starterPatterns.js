@@ -1,0 +1,67 @@
+module.exports = [
+    {
+        name: "Super Simple Sweater",
+        designer: "ahoneyknits",
+        img: "https://i.etsystatic.com/24064068/r/il/918eb7/3172147851/il_1588xN.3172147851_jfgq.jpg", 
+        description: "Beginner chunky sweater with a cropped fit",
+        level: "Beginner",
+        yarnWeight: "Super Chunky", 
+        needleSize: 19,
+        purchased: false,
+        link: "https://www.etsy.com/listing/901895929/knitting-pattern-super-simple-sweater?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=karas+knit+end&ref=sr_gallery-1-1&organic_search_click=1&pop=1",
+        price: 5,
+        tags: ["chunky", "sweater", "beginner"]
+    },
+    {
+        name: "Madison Sweater",
+        designer: "KarasKnitEng",
+        img: "https://i.etsystatic.com/27686527/r/il/1105d7/3429492067/il_794xN.3429492067_exn2.jpg", 
+        description: "Beginner chunky sweater with bell sleeves",
+        level: "Beginner",
+        yarnWeight: "Super Chunky", 
+        needleSize: 17,
+        purchased: false,
+        link: "https://www.etsy.com/listing/1098415891/madison-sweater-pattern?ref=shop_home_recs_4&crt=1",
+        price: 10,
+        tags: ["chunky", "sweater", "beginner"]
+    },
+    {
+        name: "The Oversized Cardigan",
+        designer: "LOVEBIRDknitwear",
+        img: "https://i.etsystatic.com/28878616/r/il/2b117f/3176532424/il_794xN.3176532424_an0k.jpg", 
+        description: "Beginner friendly oversized cardigan",
+        level: "Beginner",
+        yarnWeight: "Super Chunky", 
+        needleSize: 17,
+        purchased: false,
+        link: "https://www.etsy.com/listing/1030176096/knitting-pattern-the-oversized-cardigan?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=knit+pattern&ref=sr_gallery-1-32&organic_search_click=1&bes=1",
+        price: 9.80,
+        tags: ["chunky", "sweater", "sweater", "beginner"]
+    },
+    {
+        name: "Knit Scarf",
+        designer: "KniftyKnittings",
+        img: "https://i.etsystatic.com/5572559/r/il/224068/1225470508/il_1588xN.1225470508_nui2.jpg", 
+        description: "Oversized Fisherman's rib scarf",
+        level: "Beginner",
+        yarnWeight: "Super Chunky", 
+        needleSize: 17,
+        purchased: false,
+        link: "https://www.etsy.com/listing/524727278/knit-scarf-pattern-scarf-pattern?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=knit+scarf+pattern&ref=sr_gallery-1-24&organic_search_click=1&sts=1",
+        price: 4,
+        tags: ["chunky", "scarf", "beginner"]
+    },
+    {
+        name: "Maid You Look Top",
+        designer: "OshenKnits",
+        img: "https://i.etsystatic.com/28279937/r/il/e8864c/3243467118/il_794xN.3243467118_tnc8.jpg", 
+        description: "Summer cotton top that is customizable to you",
+        level: "Intermediate",
+        yarnWeight: "Worsted/DK", 
+        needleSize: 7,
+        purchased: false,
+        link: "https://www.etsy.com/listing/1047101712/maid-you-look-top-knitting-pattern?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=oshen+knits&ref=sr_gallery-1-1&organic_search_click=1&sts=1",
+        price: 10,
+        tags: ["top", "worsted", "intermediate"]
+    },
+]

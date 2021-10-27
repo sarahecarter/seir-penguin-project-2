@@ -13,6 +13,7 @@ const patternSchema = new Schema({
     designer: String,
     img: String, 
     description: String,
+    level: String,
     yarnWeight: String, 
     needleSize: Number,
     purchased: Boolean,

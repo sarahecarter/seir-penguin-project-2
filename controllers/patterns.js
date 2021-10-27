@@ -14,7 +14,7 @@ const router = express.Router()
 ///////////////////////////
 // index route
 router.get("/", (req, res) => {
-    res.send("hello there!")
+    res.render("patterns/index.liquid")
 })
 
 ///////////////////////////
