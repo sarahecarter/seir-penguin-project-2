@@ -1,0 +1,52 @@
+{% layout "layout.liquid" %}
+{% block content %}
+<h2>Add a new pattern</h2>
+<p>Found some design inspo? Enter the details below to save the pattern to your collection:</p>
+<form action="/patterns" method="post">
+    <div class="flex-pair">
+        <label for="name">Pattern Name:</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div class="flex-pair">
+        <label for="designer">Designer:</label>
+        <input type="text" name="designer" id="designer">
+    </div>
+    <div class="flex-pair">
+        <label for="img">Image:</label>
+        <input type="text" name="img" id="img">
+    </div>
+    <div class="flex-pair">
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description">
+    </div>
+    <div class="flex-pair">
+        <label for="level">Skill Level:</label>
+        <input type="text" name="level" id="level">
+    </div>
+    <div class="flex-pair">
+        <label for="yarnWeight">Yarn Weight:</label>
+        <input type="text" name="yarnWeight" id="yarnWeight">
+    </div>
+    <div class="flex-pair">
+        <label for="needleSize">Needle Size (US):</label>
+        <input type="text" name="needleSize" id="needleSize">
+    </div>
+    <!-- <div class="flex-pair">
+        <label for="purchased">Purchased?:</label>
+        <input type="checkbox" name="purchased" id="purchased">
+    </div> -->
+    <div class="flex-pair">
+        <label for="link">Pattern Link:</label>
+        <input type="text" name="link" id="link">
+    </div>
+    <div class="flex-pair">
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price">
+    </div>
+    <div class="flex-pair">
+        <label for="tags">Tags:</label>
+        <input type="text" name="tags" id="tags">
+    </div>
+    <input type="submit" value="Add New Pattern">
+</form>
+{% endblock %}

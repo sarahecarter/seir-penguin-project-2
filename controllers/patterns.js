@@ -26,6 +26,11 @@ router.get("/", (req, res) => {
     })
 })
 
+// New route 
+router.get("/new", (req, res) => {
+    res.render("patterns/new.liquid")
+})
+
 // Show route
 router.get("/:id", (req, res) => {
     const id = req.params.id

@@ -1,6 +1,7 @@
 {% layout "layout.liquid" %}
 {% block content %}
 <h2>My Patterns</h2>
+<a href="/patterns/new"><button>Add New Pattern</button></a>
 {% for pattern in patterns %}
 <div>
     <h3>{{pattern.name}}</h3>
