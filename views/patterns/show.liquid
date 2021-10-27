@@ -1,0 +1,16 @@
+{% layout "layout.liquid" %}
+{% block content %}
+    <h2>{{pattern.name}}</h2>
+    <h3>Created By: {{pattern.designer}}</h3>
+    <img src="{{pattern.img}}">
+    <h4>{{pattern.description}}</h4>
+    <h5>Level: {{pattern.level}}</h5>
+    <h5>Yarn Weight: {{pattern.yarnWeight}}</h5>
+    <h5>Needle Size (US): {{pattern.needleSize}}</h5>
+    {% if pattern.purchased == false %}
+        <a href="{{pattern.link}}">Purchase on Etsy</a>
+        <h5>${{pattern.price}}</h5>
+    {% endif %}
+    <p>Tags: {{pattern.tags}}</p>
+    <a href="/patterns">Back to Patterns List</a>
+{% endblock %}

@@ -12,7 +12,7 @@ const router = express.Router()
 ///////////////////////////
 // Routes
 ///////////////////////////
-// index route
+// Index route
 router.get("/", (req, res) => {
     // get all patterns 
     Pattern.find({})
@@ -23,6 +23,18 @@ router.get("/", (req, res) => {
     // error handling
     .catch((error) => {
         res.json({error})
+    })
+})
+
+// Show route
+router.get("/:id", (req, res) => {
+    const id = req.params.id
+
+    // find pattern by id
+    Pattern.findById(id)
+    .then((pattern) => {
+        // render show page for patter
+        res.render("patterns/show.liquid", {pattern})
     })
 })
 
