@@ -3,7 +3,7 @@
 ///////////////////////////
 const mongoose = require("./connection")
 const Pattern = require("./patterns")
-const starterPatterns = required("./starterPatterns")
+const starterPatterns = require("./starterPatterns")
 ///////////////////////////
 // Seed Code
 ///////////////////////////
@@ -12,5 +12,14 @@ const starterPatterns = required("./starterPatterns")
 const db = mongoose.connection
 
 db.on("open", () => {
-
+    // delete all patterns to prevent duplicates
+    Pattern.deleteMany({})
+    .then((data) => {
+        // seed the starter data
+        Pattern.create(starterPatterns)
+        .then(patterns => {
+            console.log(patterns)
+            db.close()
+        })
+    })
 })

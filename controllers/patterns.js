@@ -14,7 +14,16 @@ const router = express.Router()
 ///////////////////////////
 // index route
 router.get("/", (req, res) => {
-    res.render("patterns/index.liquid")
+    // get all patterns 
+    Pattern.find({})
+    .then((patterns) => {
+        // render the index template with patterns
+        res.render("patterns/index.liquid", {patterns})
+    })
+    // error handling
+    .catch((error) => {
+        res.json({error})
+    })
 })
 
 ///////////////////////////

@@ -1,4 +1,10 @@
 {% layout "layout.liquid" %}
 {% block content %}
-<h2>Hello</h2>
+<h2>My Patterns</h2>
+{% for pattern in patterns %}
+<div>
+    <h3>{{pattern.name}}</h3>
+    <a href="/patterns/{{pattern._id}}"><img src="{{pattern.img}}"></a>
+</div>
+{% endfor %}
 {% endblock %}
