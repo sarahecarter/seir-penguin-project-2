@@ -31,6 +31,19 @@ router.get("/new", (req, res) => {
     res.render("patterns/new.liquid")
 })
 
+// Create route 
+router.post("/", (req, res) => {
+    // check if purchased is checked and convert property to true or false using ternary operator
+    req.body.purchased = req.body.purchased === 'on' ? true : false
+
+    // add new pattern
+    Pattern.create(req.body)
+    .then((newPattern) => {
+        // redirect user back to main list
+        res.redirect("/patterns")
+    })
+})
+
 // Show route
 router.get("/:id", (req, res) => {
     const id = req.params.id
