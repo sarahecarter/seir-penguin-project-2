@@ -77,6 +77,21 @@ router.put("/:id", (req, res) => {
     })
 })
 
+// Destroy route
+router.delete("/:id", (req, res) => {
+    const id = req.params.id
+
+    // find and delete pattern
+    Pattern.findByIdAndRemove(id)
+    .then((pattern) => {
+        // redirect back to main list
+        res.redirect("/patterns")
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
 // Show route
 router.get("/:id", (req, res) => {
     const id = req.params.id

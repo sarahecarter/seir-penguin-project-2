@@ -13,5 +13,8 @@
     {% endif %}
     <p>Tags: {{pattern.tags}}</p>
     <a href="/patterns/{{pattern._id}}/edit"><button>Edit Pattern</button></a>
+    <form action="/patterns/{{pattern._id}}?_method=delete" method="post">
+        <input type="submit" value="Delete Pattern">
+    </form>
     <a href="/patterns">Back to Patterns List</a>
 {% endblock %}
