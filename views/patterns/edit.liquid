@@ -1,7 +1,7 @@
 {% layout "layout.liquid" %}
 {% block content %}
 <h2>Edit Pattern Info</h2>
-<form action="/patterns" method="post">
+<form action="/patterns/{{pattern._id}}?_method=put" method="post">
     <div class="flex-pair">
         <label for="name">Pattern Name:</label>
         <input type="text" name="name" id="name" value="{{pattern.name}}">

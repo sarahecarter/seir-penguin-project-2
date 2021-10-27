@@ -54,6 +54,27 @@ router.get("/:id/edit", (req, res) => {
         // render edit form
         res.render("patterns/edit.liquid", {pattern})
     })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Update route
+router.put("/:id", (req, res) => {
+
+    // check if purchased is checked and convert property to true or false using ternary operator
+    req.body.purchased = req.body.purchased === 'on' ? true : false
+    const id = req.params.id
+
+    // find and update pattern
+    Pattern.findByIdAndUpdate(id, req.body, {new: true})
+    .then((pattern) => {
+        // redirect back to main list
+        res.redirect("/patterns")
+    })
+    .catch((error) => {
+        res.json({error})
+    })
 })
 
 // Show route
