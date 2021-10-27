@@ -1,0 +1,23 @@
+///////////////////////////
+// Import Dependencies
+///////////////////////////
+const Pattern = require("../models/patterns")
+const express = require("express")
+
+///////////////////////////
+// Create Router
+///////////////////////////
+const router = express.Router()
+
+///////////////////////////
+// Routes
+///////////////////////////
+// index route
+router.get("/", (req, res) => {
+    res.send("hello there!")
+})
+
+///////////////////////////
+// Export Router
+///////////////////////////
+module.exports = router
