@@ -35,8 +35,8 @@ module.exports = [
         needleSize: 17,
         purchased: false,
         link: "https://www.etsy.com/listing/1030176096/knitting-pattern-the-oversized-cardigan?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=knit+pattern&ref=sr_gallery-1-32&organic_search_click=1&bes=1",
-        price: 9.80,
-        tags: ["chunky", "sweater", "sweater", "beginner"]
+        price: 10,
+        tags: ["chunky", "cardigan", "sweater", "beginner"]
     },
     {
         name: "Knit Scarf",

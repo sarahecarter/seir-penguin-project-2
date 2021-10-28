@@ -1,7 +1,7 @@
 {% layout "layout.liquid" %}
 {% block content %}
-<h2>Edit Pattern Info</h2>
-<form action="/patterns/{{pattern._id}}?_method=put" method="post">
+<h2 class="form-title">Edit Pattern Info</h2>
+<form action="/patterns/{{pattern._id}}?_method=put" method="post" class="form">
     <div class="flex-pair">
         <label for="name">Pattern Name:</label>
         <input type="text" name="name" id="name" value="{{pattern.name}}">
@@ -30,7 +30,7 @@
         <label for="needleSize">Needle Size (US):</label>
         <input type="text" name="needleSize" id="needleSize" value="{{pattern.needleSize}}">
     </div>
-    <div class="flex-pair">
+    <div class="flex-pair checkbox">
         <label for="purchased">Purchased?:</label>
         <input type="checkbox" name="purchased" id="purchased"
         {% if pattern.purchased == true%}

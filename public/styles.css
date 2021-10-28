@@ -26,6 +26,11 @@ a {
     text-decoration: none;
 }
 
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
 h1 {
     font-family: 'Abril Fatface', cursive;
     text-align: center;
@@ -59,6 +64,14 @@ h2 {
     cursor: pointer;
     color: var(--dark-orange);
     border: none;
+    box-shadow: 5px 10px 15px 3px hsl(14, 42%, 50%);
+    transition: .5s;
+}
+
+.add:hover,
+.pattern:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 10px 15px 2px hsl(14, 42%, 50%);
 }
 
 .hide {
@@ -97,10 +110,7 @@ img {
     align-items: center;
     background-color: var(--white-smoke);
     transition: 1s;
-}
-
-.pattern:hover {
-    transform: scale(1.01);
+    box-shadow: 5px 5px 10px 2px hsl(14, 41%, 48%);
 }
 
 .icons {
@@ -125,6 +135,7 @@ img {
     margin: auto;
     padding: 20px 10px;
     border-radius: 20px;
+    box-shadow: 5px 10px 18px 2px hsl(14, 42%, 41%);
 }
 
 .show-container h2 {
@@ -179,7 +190,7 @@ img {
 .back {
     display: block;
     color: var(--white-smoke);
-    margin: 20px;
+    margin: 30px;
 }
 
 .buttons {
@@ -197,7 +208,63 @@ img {
     font-family: 'Josefin Slab', serif;
 }
 
+/* Form Styles */
+.form-title {
+    margin: 10px;
+}
 
+.add-text {
+    font-family: 'Josefin Slab', serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.flex-pair {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.form label {
+    text-align: left;
+    color: var(--white-smoke);
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.form input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    font-size: 1.1em;
+    box-shadow: 5px 5px 10px 2px hsl(14, 41%, 48%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form input[type="submit"] {
+    border: 0;
+    background-color: var(--white-smoke);
+    color: var(--dark-orange);
+    border-radius: 20px;
+    width: 70%;
+    margin: 30px auto;
+    font-family: 'Josefin Slab', serif;
+}
 
 /* Media Queries */
 
