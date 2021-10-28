@@ -1,11 +1,22 @@
 {% layout "layout.liquid" %}
 {% block content %}
-<h2>My Patterns</h2>
-<a href="/patterns/new"><button>Add New Pattern</button></a>
-{% for pattern in patterns %}
-<div>
-    <h3>{{pattern.name}}</h3>
-    <a href="/patterns/{{pattern._id}}"><img src="{{pattern.img}}"></a>
+<div class="top">
+    <h2>My Patterns</h2>
+    <a href="/patterns/new"><button class="add">+</button></a>
+    <a href="/patterns/new" class="hide"><button class="add-full">Add New Pattern</button></a>
 </div>
-{% endfor %}
+
+<div class="main-container">
+    {% for pattern in patterns %}
+    <div class="pattern">
+        <h3 class="title">{{pattern.name}}</h3>
+        <a href="/patterns/{{pattern._id}}"><img src="{{pattern.img}}"></a>
+        <div class="icons">
+            <a href="/patterns/{{pattern._id}}/edit"><i class="fas fa-pencil-alt fa-lg"></i></a>
+            <i class="fas fa-trash-alt fa-lg"></i>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
