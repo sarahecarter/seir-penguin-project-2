@@ -17,7 +17,8 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; */
 }
 
 body {
-    background: var(--dark-orange);
+    background: linear-gradient(180deg, rgba(226,125,96,1) 15%, rgba(230,150,127,1) 72%);
+    background-attachment: fixed;
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
 }
@@ -71,7 +72,7 @@ h2 {
 .add:hover,
 .pattern:hover {
     transform: scale(1.02);
-    box-shadow: 5px 10px 15px 2px hsl(14, 42%, 50%);
+    box-shadow: 2px 2px 15px 1px hsl(14, 42%, 50%);
 }
 
 .add:hover {
@@ -108,7 +109,7 @@ img {
     margin: 15px;
     padding: 20px 40px;
     border-radius: 20px;
-    max-width: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,7 +273,8 @@ img {
 .back {
     display: block;
     color: var(--white-smoke);
-    margin: 30px;
+    padding: 10px;
+    margin: 30px auto;
 }
 
 .buttons {
@@ -371,6 +373,7 @@ img {
 
     .show-container {
         width: 90%;
+        max-height: 450px;
         padding: 20px;
         display: grid;
         justify-items: center;
@@ -391,7 +394,7 @@ img {
 
     .pattern-intro {
         grid-area: intro;
-        margin-top: 20px;
+        margin-top: 5%;
         align-self: start;
     }
 
@@ -437,6 +440,11 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
+    .main-container {
+        max-width: 90%;
+        margin: auto;
+    }
+
     .modal {
         width: 50%;
     }
