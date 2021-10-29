@@ -36,6 +36,11 @@ router.post("/", (req, res) => {
     // check if purchased is checked and convert property to true or false using ternary operator
     req.body.purchased = req.body.purchased === 'on' ? true : false
 
+    // format tags by removing spaces
+    const spaceRemove = req.body.tags.replace(/ /g, "")
+    // split into an array
+    req.body.tags = spaceRemove.split(',');
+
     // add new pattern
     Pattern.create(req.body)
     .then((newPattern) => {
@@ -65,6 +70,11 @@ router.put("/:id", (req, res) => {
     // check if purchased is checked and convert property to true or false using ternary operator
     req.body.purchased = req.body.purchased === 'on' ? true : false
     const id = req.params.id
+
+    // format tags by removing spaces
+    const spaceRemove = req.body.tags.replace(/ /g, "")
+    // split into an array
+    req.body.tags = spaceRemove.split(',');
 
     // find and update pattern
     Pattern.findByIdAndUpdate(id, req.body, {new: true})
