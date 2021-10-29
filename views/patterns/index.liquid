@@ -15,7 +15,12 @@
         <!-- </a> -->
         <div class="icons">
             <a href="/patterns/{{pattern._id}}/edit"><i class="fas fa-pencil-alt fa-lg"></i></a>
-            <i class="fas fa-trash-alt fa-lg"></i>
+
+            <form action="/patterns/{{pattern._id}}?_method=delete" method="post">
+                <button type="submit" class="delete-btn">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                </button>
+            </form>
         </div>
     </div>
 
