@@ -1,7 +1,7 @@
 {% layout "layout.liquid" %}
 {% block content %}
-<h2 class="form-title">Add a new pattern</h2>
-<p class="add-text">Found some new inspo? Enter the details below to save the pattern to your collection:</p>
+<h2 class="form-title">Add a New Pattern</h2>
+<p class="add-text">Found some new inspo? Enter the details below to save the pattern to your collection.</p>
 <form action="/patterns" method="post" class="form">
     <div class="flex-pair">
         <label for="name">Pattern Name:</label>
@@ -49,4 +49,5 @@
     </div>
     <input type="submit" value="Add New Pattern">
 </form>
+<a href="/patterns" class="back">Back to Patterns List</a>
 {% endblock %}

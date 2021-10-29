@@ -10,12 +10,32 @@
     {% for pattern in patterns %}
     <div class="pattern">
         <h3 class="title">{{pattern.name}}</h3>
-        <a href="/patterns/{{pattern._id}}"><img src="{{pattern.img}}"></a>
+        <!-- <a href="/patterns/{{pattern._id}}"> -->
+            <img src="{{pattern.img}}" class="open-modal">
+        <!-- </a> -->
         <div class="icons">
             <a href="/patterns/{{pattern._id}}/edit"><i class="fas fa-pencil-alt fa-lg"></i></a>
             <i class="fas fa-trash-alt fa-lg"></i>
         </div>
     </div>
+
+    <div class="overlay hide">
+        <div class="modal">
+            <img src="{{pattern.img}}">
+            <div>
+                <div class="modal-intro">
+                    <h2 class="pattern-name">{{pattern.name}}</h2>
+                    <h3>Created By: {{pattern.designer}}</h3>
+                </div>
+        
+                <h4>{{pattern.description}}</h4>
+                <a href="patterns/{{pattern._id}}"><button>More Info</button></a>
+    
+                <a class="close">Close</a>
+            </div>
+        </div>
+    </div>
+
     {% endfor %}
 </div>
 

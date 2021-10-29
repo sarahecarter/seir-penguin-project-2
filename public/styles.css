@@ -70,8 +70,12 @@ h2 {
 
 .add:hover,
 .pattern:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 5px 10px 15px 2px hsl(14, 42%, 50%);
+}
+
+.add:hover {
+    transform: scale(1.1);
 }
 
 .hide {
@@ -113,6 +117,10 @@ img {
     box-shadow: 5px 5px 10px 2px hsl(14, 41%, 48%);
 }
 
+.pattern img {
+    cursor: pointer;
+}
+
 .icons {
     display: flex;
     justify-content: space-around;
@@ -123,6 +131,72 @@ img {
 .fa-pencil-alt,
 .fa-trash-alt {
     color: var(--light-orange);
+}
+
+/* Modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4);
+    height: 100vh;
+    z-index: 100;
+}
+
+.modal {
+    margin: 10% auto;
+    padding: 20px;
+    background-color: var(--white-smoke);
+    width: 90%;
+    border-radius: 20px;
+}
+
+.modal-intro {
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-orange);
+}
+
+.modal-intro h2 {
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Josefin Slab', serif;
+    letter-spacing: .15em;
+}
+
+.modal-intro h3 {
+    margin: 10px 0;
+    opacity: 0.5;
+}
+
+.modal h4 {
+    margin: 10px;
+}
+
+.modal button {
+    border: none;
+    background-color: var(--dark-orange);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.1em;
+}
+
+.close {
+    opacity: 0.5;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 30%;
+}
+
+.hide {
+    display: none;
 }
 
 /* Show Page */
@@ -169,7 +243,8 @@ img {
 }
 
 .purchase {
-    margin-bottom: 10px;
+    width: 50%;
+    margin: 10px auto;
     padding: 10px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
@@ -183,7 +258,14 @@ img {
     color: black;
 }
 
+.tag-title {
+    opacity: 0.5;
+}
+
 .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     color: var(--light-orange);
 }
 
@@ -195,6 +277,7 @@ img {
 
 .buttons {
     display: flex;
+    justify-content: center;
 }
 
 .buttons input[type="submit"],
@@ -215,12 +298,15 @@ img {
 
 .add-text {
     font-family: 'Josefin Slab', serif;
+    margin-bottom: 10px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    border-top: 1px solid var(--white-smoke);
+    padding-top: 10px;
 }
 
 .flex-pair {
@@ -269,5 +355,102 @@ img {
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
+
+    .modal {
+        width: 60%;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .modal-intro {
+        width: 90%;
+    }
+
+
+    .show-container {
+        width: 90%;
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 35% 65%;
+        grid-template-areas: 
+        "img intro"
+        "img body";
+    }
+
+    .show-container img {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+
+    .pattern-intro {
+        grid-area: intro;
+        margin-top: 20px;
+        align-self: start;
+    }
+
+    .pattern-body {
+        grid-area: body;
+        border-top: 1px solid var(--light-orange);
+        width: 80%;
+        align-self: end;
+    }
+
+    .purchase {
+        width: 35%;
+    }
+
+    .buttons {
+        margin-bottom: 20px;
+    }
+
+    .form {
+        width: 70%;
+        margin: auto;
+    }
+
+    .flex-pair {
+        flex-direction: row;
+    }
+
+    .form label {
+        flex-basis: 25%;
+    }
+
+    .form input {
+        flex-basis: 75%;
+    }
+
+    .form input[type="checkbox"] {
+        flex-basis: auto;
+    }
+
+    .form input[type="submit"] {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .modal {
+        width: 50%;
+    }
+
+    .show-container {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .form {
+        width: 60%;
+    }
 
 }
