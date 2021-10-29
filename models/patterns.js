@@ -19,7 +19,8 @@ const patternSchema = new Schema({
     purchased: Boolean,
     link: String,
     price: Number,
-    tags: [String]
+    tags: [String],
+    username: String
 })
 
 const Pattern = model("Pattern", patternSchema)

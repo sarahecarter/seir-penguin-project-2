@@ -54,7 +54,12 @@ router.post("/login", (req, res) => {
             // compare passwords
             const result = await bcrypt.compare(password, user.password)
 
+            // if password matches
             if (result) {
+                // store data about session
+                req.session.loggedIn = true
+                req.session.username = username
+                // redirect to pattern index page
                 res.redirect("/patterns")
             }
             else {
@@ -67,6 +72,15 @@ router.post("/login", (req, res) => {
     })
     .catch((error) => {
         res.json({error})
+    })
+})
+
+// logout route, get request to /user/logout
+router.get("/logout", (req, res) => {
+    // destroy the session
+    req.session.destroy((err) => {
+        // send user back to main page
+        res.redirect("/")
     })
 })
 

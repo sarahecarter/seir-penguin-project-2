@@ -12,6 +12,8 @@ const router = express.Router()
 ///////////////////////////
 // Router Middleware
 ///////////////////////////
+const {auth} = require("./middleware")
+router.use(auth)
 
 ///////////////////////////
 // Routes
@@ -19,7 +21,7 @@ const router = express.Router()
 // Index route
 router.get("/", (req, res) => {
     // get all patterns 
-    Pattern.find({})
+    Pattern.find({username: req.session.username})
     .then((patterns) => {
         // render the index template with patterns
         res.render("patterns/index.liquid", {patterns})
@@ -44,6 +46,9 @@ router.post("/", (req, res) => {
     const spaceRemove = req.body.tags.replace(/ /g, "")
     // split into an array
     req.body.tags = spaceRemove.split(',');
+
+    // add the username to req.body to track user
+    req.body.username = req.session.username
 
     // add new pattern
     Pattern.create(req.body)

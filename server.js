@@ -9,6 +9,8 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const PatternRouter = require("./controllers/patterns")
 const UserRouter = require("./controllers/user")
+const session = require('express-session')
+const MongoStore = require('connect-mongo')
 
 // Construct an absolute path to the views folder
 const viewsFolder = path.resolve(__dirname, "views/")
@@ -28,6 +30,12 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 // use morgan logger
 app.use(morgan("tiny"))
+// middleware to create sessions (req.session)
+app.use(session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
+    resave: false
+}))
 
 ///////////////////////////
 // Routes
