@@ -14,7 +14,14 @@
     <script src="/app.js" defer></script>
 </head>
 <body>
-    <h1>knifty.</h1>
+    <header>
+        {% if main == true %}
+        <h1>knifty.</h1>
+        {% else %}
+        <h1>knifty.</h1>
+        <a href="/user/logout" class="logout">Log out</a>
+        {% endif %}
+    </header>
     {% block content %}
     {% endblock %}
 </body>

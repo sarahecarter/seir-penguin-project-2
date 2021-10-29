@@ -19,7 +19,7 @@ const router = express.Router()
 ///////////////////////////
 // Sign Up routes
 router.get("/signup", (req, res) => {
-    res.render("user/signup.liquid")
+    res.render("user/signup.liquid", {main: true})
 })
 
 router.post("/signup", async (req, res) => {
@@ -39,7 +39,7 @@ router.post("/signup", async (req, res) => {
 
 // Login routes
 router.get("/login", (req, res) => {
-    res.render("user/login.liquid")
+    res.render("user/login.liquid", {main: true})
 })
 
 router.post("/login", (req, res) => {

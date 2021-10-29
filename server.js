@@ -42,7 +42,7 @@ app.use(session({
 ///////////////////////////
 // route
 app.get("/", (req, res) => {
-    res.render("index.liquid")
+    res.render("index.liquid", {main: true})
 })
 
 // Register pattern router
