@@ -18,8 +18,10 @@
         {% if main == true %}
         <h1>knifty.</h1>
         {% else %}
-        <h1>knifty.</h1>
-        <a href="/user/logout" class="logout">Log out</a>
+        <div class="flex-header">
+            <h1>knifty.</h1>
+            <a href="/user/logout" class="logout">Log out</a>
+        </div>
         {% endif %}
     </header>
     {% block content %}
