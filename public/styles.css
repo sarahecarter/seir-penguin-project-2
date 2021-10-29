@@ -132,6 +132,11 @@ img {
 .fa-pencil-alt,
 .fa-trash-alt {
     color: var(--light-orange);
+    transition: .5s;
+}
+
+i:hover {
+    color: var(--dark-orange);
 }
 
 .delete-btn {

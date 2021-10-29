@@ -1,0 +1,21 @@
+///////////////////////////
+// Import Dependencies
+///////////////////////////
+const mongoose = require("./connection")
+
+///////////////////////////
+// Create User Model
+///////////////////////////
+const {Schema, model} = mongoose
+
+const userSchema = new Schema({
+    username: {type: String, required: true, unique: true},
+    password: {type: String, require: true}
+})
+
+const User = model("User", userSchema)
+
+///////////////////////////
+// Export User Model
+///////////////////////////
+module.exports = User

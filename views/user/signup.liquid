@@ -1,0 +1,19 @@
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+    <h2 class="form-title">Sign Up</h2>
+    <form action="/user/signup" method="post" class="form">
+        <div class="flex-pair">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </div>
+        <div class="flex-pair">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <input type="submit" value="Create Account">
+    </form>
+</div>
+
+{% endblock %}

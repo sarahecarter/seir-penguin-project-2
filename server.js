@@ -8,6 +8,7 @@ const methodOverride = require("method-override")
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const PatternRouter = require("./controllers/patterns")
+const UserRouter = require("./controllers/user")
 
 // Construct an absolute path to the views folder
 const viewsFolder = path.resolve(__dirname, "views/")
@@ -33,11 +34,14 @@ app.use(morgan("tiny"))
 ///////////////////////////
 // route
 app.get("/", (req, res) => {
-    res.send("This App is working")
+    res.render("index.liquid")
 })
 
-// Register router
+// Register pattern router
 app.use("/patterns", PatternRouter)
+
+// Register user router
+app.use("/user", UserRouter)
 
 
 ///////////////////////////
