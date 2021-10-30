@@ -19,23 +19,47 @@ $($filter).click(() => {
     $dropdown.toggleClass('hide');
 })
 
-// Filters
-const $chunky = $('.chunky')
-const $sweater = $('.sweater')
-const $beginner = $('.beginner')
-
 // Links
 const $chunkyA = $('#chunky-a')
 const $sweaterA = $('#sweater-a')
 const $beginnerA = $('#beg-a')
+const $reset = $('#reset-a')
 
-// $beginnerA.click(() => {
-//     for (pattern of $patterns) {
-//         if (pattern.hasClass('beginner')) {
-//             pattern.toggleClass('hide');
-//         }
-//         else {
-//             pattern.toggleClass('hide');
-//         }
-//     }
-// })
+$beginnerA.click(() => {
+    for (pattern of $patterns ) {
+        if (pattern.classList.contains('beginner')) {
+            pattern.classList.remove('hide');
+        }
+        else {
+            pattern.classList.add('hide');
+        }
+    }
+})
+
+$chunkyA.click(() => {
+    for (pattern of $patterns ) {
+        if (pattern.classList.contains('chunky')) {
+            pattern.classList.remove('hide');
+        }
+        else {
+            pattern.classList.add('hide');
+        }
+    }
+})
+
+$sweaterA.click(() => {
+    for (pattern of $patterns ) {
+        if (pattern.classList.contains('sweater')) {
+            pattern.classList.remove('hide');
+        }
+        else {
+            pattern.classList.add('hide');
+        }
+    }
+})
+
+$reset.click(() => {
+    for (pattern of $patterns) {
+        pattern.classList.remove('hide');
+    }
+})

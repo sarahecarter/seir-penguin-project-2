@@ -197,6 +197,12 @@ img {
     border-radius: 5px;
 }
 
+#reset-a {
+    opacity: 1;
+    color: var(--light-orange);
+    cursor: pointer;
+}
+
 /* Modal */
 .overlay {
     position: fixed;
@@ -477,6 +483,10 @@ img {
 
     .dropdown a:hover {
         opacity: 1;
+        color: var(--dark-orange);
+    }
+
+    #reset-a:hover {
         color: var(--dark-orange);
     }
 
