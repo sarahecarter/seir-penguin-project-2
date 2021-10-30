@@ -2,8 +2,6 @@
     --white-smoke: #F5F5F5;
     --dark-orange: #E27D60;
     --light-orange: #E8A87C;
-    --purple: #C38D9E;
-    --dark-purple: #be5e7c;
 }
 
 /* Main Styling */
@@ -14,6 +12,7 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: .5s;
 }
 
 body {
@@ -64,12 +63,6 @@ h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
     width: 50%;
-    transition: .5s;
-}
-
-.index-options button:hover {
-    color: var(--white-smoke);
-    background-color: black;
 }
 
 /* Patterns/Index page */
@@ -79,6 +72,7 @@ h2 {
     text-decoration: none;
     display: block;
     margin: 10px;
+    padding: 5px;
 }
 
 header {
@@ -96,6 +90,18 @@ header {
     border-top: 1px solid var(--white-smoke);
 }
 
+.top-icons {
+    display: flex;
+    width: 85px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-sliders-h {
+    color: white;
+    cursor: pointer;
+}
+
 .add {
     width: 40px;
     height: 40px;
@@ -106,19 +112,6 @@ header {
     color: var(--dark-orange);
     border: none;
     box-shadow: 5px 10px 15px 3px hsl(14, 42%, 50%);
-    transition: .5s;
-}
-
-.add:hover,
-.pattern:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 15px 1px hsl(14, 42%, 50%);
-}
-
-.add:hover {
-    transform: scale(1.1);
-    background: black;
-    color: white;
 }
 
 .hide {
@@ -174,16 +167,34 @@ img {
 .fa-pencil-alt,
 .fa-trash-alt {
     color: var(--light-orange);
-    transition: .5s;
-}
-
-i:hover {
-    color: var(--dark-orange);
 }
 
 .delete-btn {
     border: none;
     font-size: 0.9em;
+}
+
+/* Dropdown menu */
+.dropdown a {
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    text-align: left;
+    z-index: 100;
+    background: whitesmoke;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 5px;
+    position: absolute;
+    right: 3%;
+    width: 140px;
+    border-radius: 5px;
 }
 
 /* Modal */
@@ -348,18 +359,23 @@ i:hover {
 /* Form Styles */
 .form-title {
     margin: 10px;
+    border-top: 1px solid var(--white-smoke);
+    padding: 20px 0 0;
+    width: 90%;
+    margin: auto;
 }
 
 .add-text {
     font-family: 'Josefin Slab', serif;
-    margin-bottom: 10px;
+    margin: 10px auto;
+    font-size: 1.2em;
+    width: 90%;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    border-top: 1px solid var(--white-smoke);
+    margin: 0 20px;
     padding-top: 10px;
 }
 
@@ -406,6 +422,66 @@ i:hover {
     font-family: 'Josefin Slab', serif;
 }
 
+/* Hover Styles - Keeps them from getting stuck */
+/* https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/ */
+
+@media (hover: hover) {
+
+    i:hover {
+        color: var(--dark-orange);
+    }
+
+    .fa-sliders-h:hover {
+        color: black;
+    }
+
+    .orange-btn:hover,
+    input.orange-btn:hover {
+        background: #df5d3a;
+    }
+
+    .logout:hover,
+    .back:hover {
+        letter-spacing: .2em;
+    }
+
+    input.white-btn:hover {
+        background: black;
+        color: var(--white-smoke);
+    }
+    
+    .close:hover {
+        opacity: 1;
+    }
+
+    .index-options button:hover {
+        color: var(--white-smoke);
+        background-color: black;
+    }
+
+    .add:hover,
+    .pattern:hover {
+        transform: scale(1.02);
+        box-shadow: 2px 2px 15px 1px hsl(14, 42%, 50%);
+    }
+
+    .add:hover {
+        transform: scale(1.1);
+        background: black;
+        color: white;
+    }
+
+    .purchase-link:hover {
+        color: var(--dark-orange);
+    }
+
+    .dropdown a:hover {
+        opacity: 1;
+        color: var(--dark-orange);
+    }
+
+  }
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
@@ -434,6 +510,10 @@ i:hover {
 
     .index-options button {
         width: 200px;
+    }
+
+    .dropdown-content {
+        right: 8%;
     }
 
     .modal {
@@ -497,6 +577,12 @@ i:hover {
     .form {
         width: 70%;
         margin: auto;
+        border-top: 1px solid var(--white-smoke);
+    }
+
+    .form-title {
+        border: none;
+        padding: 10px;
     }
 
     .flex-pair {
@@ -526,6 +612,10 @@ i:hover {
         margin: auto;
     }
 
+    .dropdown-content {
+        right: 10%;
+    }
+
     .modal {
         width: 50%;
     }
@@ -546,3 +636,4 @@ i:hover {
     }
 
 }
+

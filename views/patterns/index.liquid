@@ -2,13 +2,24 @@
 {% block content %}
 <div class="top">
     <h2>My Patterns</h2>
-    <a href="/patterns/new"><button class="add">+</button></a>
-    <a href="/patterns/new" class="hide"><button class="add-full">Add New Pattern</button></a>
+    <div class="top-icons">
+        <div class="dropdown">
+            <i class="fas fa-sliders-h fa-2x filter"></i>
+            <div id="filterDropdown" class="dropdown-content hide">
+                <p>Filters:</p>
+                <a id="chunky-a">Chunky</a>
+                <a id="beg-a">Beginner</a>
+                <a id="sweater-a">Sweater</a>
+            </div>
+        </div>
+        <a href="/patterns/new"><button class="add">+</button></a>
+    </div>
 </div>
 
 <div class="main-container">
     {% for pattern in patterns %}
-    <div class="pattern">
+    <!-- Add tags to each pattern item via class -->
+    <div class="pattern {{pattern.tags | replace: ",", " "}}">
         <h3 class="title">{{pattern.name}}</h3>
         <!-- <a href="/patterns/{{pattern._id}}"> -->
             <img src="{{pattern.img}}" class="open-modal">
@@ -34,7 +45,7 @@
                 </div>
         
                 <h4>{{pattern.description}}</h4>
-                <a href="patterns/{{pattern._id}}"><button>More Info</button></a>
+                <a href="patterns/{{pattern._id}}"><button class="orange-btn">More Info</button></a>
     
                 <a class="close">Close</a>
             </div>

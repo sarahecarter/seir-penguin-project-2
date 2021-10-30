@@ -17,7 +17,7 @@
             </div>
             {% if pattern.purchased == false %}
             <div class="purchase">
-                <a href="{{pattern.link}}">Purchase Here</a>
+                <a href="{{pattern.link}}" class="purchase-link">Purchase Here</a>
                 <h5>${{pattern.price}}</h5>
             </div>
             {% endif %}
@@ -28,9 +28,9 @@
                 {% endfor %}
             </div>
             <div class="buttons">
-                <a href="/patterns/{{pattern._id}}/edit"><button>Edit Pattern</button></a>
+                <a href="/patterns/{{pattern._id}}/edit"><button class="orange-btn">Edit Pattern</button></a>
                 <form action="/patterns/{{pattern._id}}?_method=delete" method="post">
-                    <input type="submit" value="Delete Pattern">
+                    <input type="submit" value="Delete Pattern" class="orange-btn">
                 </form>
             </div>
         </div>
