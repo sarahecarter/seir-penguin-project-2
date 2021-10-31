@@ -110,6 +110,8 @@ header {
 }
 
 .add {
+    background: var(--white-smoke);
+    text-align: center;
     width: 35px;
     height: 35px;
     border-radius: 50%;
