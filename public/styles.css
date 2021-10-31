@@ -65,6 +65,11 @@ h2 {
     width: 50%;
 }
 
+.intro {
+    font-family: 'Josefin Slab', sans-serif;
+    margin: 20px;
+}
+
 /* Patterns/Index page */
 
 .logout {
