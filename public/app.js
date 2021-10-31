@@ -4,6 +4,9 @@ const $close = $('.close')
 const $patterns = $('.pattern')
 const $filter = $('.filter')
 const $dropdown = $('.dropdown-content')
+const $search = $('#search')
+const $searchInput = $('input[type="search"]')
+const $titles = $('.title')
 
 // Modal Functionality
 $('.open-modal').click((e) => {
@@ -62,4 +65,22 @@ $reset.click(() => {
     for (pattern of $patterns) {
         pattern.classList.remove('hide');
     }
+})
+
+// Search functionality
+$search.click(() => {
+    $searchInput.toggleClass('hide');
+})
+
+$searchInput.keyup(() => {
+    const searchValue = $searchInput.val().toLowerCase()
+    for (title of $titles) {
+        if (title.textContent.toLowerCase().includes(searchValue)) {
+            title.parentElement.classList.remove('hide')
+        }
+        else {
+            title.parentElement.classList.add('hide')
+        }
+    }
+
 })

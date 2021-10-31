@@ -92,19 +92,20 @@ header {
 
 .top-icons {
     display: flex;
-    width: 85px;
+    width: 120px;
     align-items: center;
     justify-content: space-between;
 }
 
-.fa-sliders-h {
+.fa-sliders-h,
+.fa-search {
     color: white;
     cursor: pointer;
 }
 
 .add {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     font-size: 2em;
     font-weight: 100;
@@ -112,6 +113,16 @@ header {
     color: var(--dark-orange);
     border: none;
     box-shadow: 5px 10px 15px 3px hsl(14, 42%, 50%);
+}
+
+input[type="search"] {
+    width: 70%;
+    height: 40px;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .hide {
@@ -437,7 +448,8 @@ img {
         color: var(--dark-orange);
     }
 
-    .fa-sliders-h:hover {
+    .fa-sliders-h:hover,
+    .fa-search:hover {
         color: black;
     }
 
@@ -524,6 +536,10 @@ img {
 
     .dropdown-content {
         right: 8%;
+    }
+
+    input[type="search"] {
+        width: 50%;
     }
 
     .modal {
