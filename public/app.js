@@ -17,6 +17,12 @@ $('.close').click((e) => {
     $(e.target).closest('.overlay').toggleClass('hide');
 })
 
+$(document).click((e) => {
+    if ($(e.target).hasClass('overlay')) {
+        $(e.target).toggleClass('hide');
+    }
+})
+
 // Filter Functionality
 $($filter).click(() => {
     $dropdown.toggleClass('hide');
