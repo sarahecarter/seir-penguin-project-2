@@ -43,7 +43,7 @@ This project uses Express, MongoDB, and Mongoose to create a fully functional CR
 
 ## User Stories
 
-Users will be able to add a new pattern to their collection by clicking the "+" button. A new form will then be rendered that allows the user to input pattern details. On the form, when the user clicks "Add New Pattern" they will be taken back to their main collection page where their pattern has been added 
+Users will be able to add a new pattern to their collection by clicking the "+" button. A new form will then be rendered that allows the user to input pattern details. On the form, when the user clicks "Add New Pattern" they will be taken back to their main collection page where their pattern has been added. From the main page, users can edit or delete their patterns by clicking the edit and delete icons on the pattern cards. Users can access more details about patterns by clicking the image on the cards and then the "More Info" button on the pattern modals. This links to the show page for the pattern. On the show page users are also able to edit and delete their patterns, or return back to the main index page.
 
 ## Challenges
 
