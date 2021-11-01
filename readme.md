@@ -47,7 +47,7 @@ Users will be able to add a new pattern to their collection by clicking the "+" 
 
 ## Challenges
 
-- When styling, I realized that I wanted to change the layouts of the modals and project cards in larger screens from a one column to two column format. To achieve this I needed to switch from using Flexbox to CSS Grid and `gris-areas` to create the specific layout I wanted.
+- When styling, I realized that I wanted to change the layouts of the modals and project cards in larger screens from a one column to two column format. To achieve this I needed to switch from using Flexbox to CSS Grid and `grid-areas` to create the specific layout I wanted.
 - When creating the filters based on tags, I wasn't sure how to go about getting the tag data onto the patterns in the index page. I didn't want to list the tags on the pattern cards since aesthetically I only wanted the title, image, and the edit and delete icons. I was able to work around adding them by instead adding the tags as classes on the cards instead. When clicking the filter links, jQuery is used to loop through the patterns and check if they have a class that matches the filter link.
 
 ## List of Technologies
